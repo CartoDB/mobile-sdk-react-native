@@ -12,7 +12,9 @@ class InternalMapView extends React.Component {
 
 InternalMapView.propTypes = {
 	license: React.PropTypes.string,
-	alpha: React.PropTypes.number
+	alpha: React.PropTypes.number,
+	zoom: React.PropTypes.number,
+	addBaseLayer: React.PropTypes.bool
 }
 
 var CTRMapView = requireNativeComponent('CTRMapView', InternalMapView);

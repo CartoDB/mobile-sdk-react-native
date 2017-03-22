@@ -12,22 +12,61 @@
 
 RCT_EXPORT_MODULE()
 
-- (NTMapView *)view
+- (UIView *)view
 {
-  NSString *license = @"XTUN3Q0ZDWWdPKysrNHY2bDBJbndORDNHakZTMHNoTFRBaFFmZklNZ1l5b1hmcTBhQUtSeURHMWtSWVF1bWc9PQoKYXBwVG9rZW49NmI1ZGMxZTItMTFkMy00MjY1LTg2MjQtZTFhMWU4ZTY5ZWQ5CmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLmN0cm1hcHZpZXcKb25saW5lTGljZW5zZT0xCnByb2R1Y3RzPXNkay1pb3MtNC4qCndhdGVybWFyaz1jdXN0b20K";
-  [NTMapView registerLicense:license];
-  
   NTMapView *mapView = [[NTMapView alloc]init];
-  
-  NTCartoOnlineVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DEFAULT];
-  
-  [[mapView getLayers] add:layer];
-  
+  // TODO Set some default values
   return mapView;
 }
 
-RCT_EXPORT_VIEW_PROPERTY(license, NSString)
-
 RCT_EXPORT_VIEW_PROPERTY(alpha, CGFloat)
 
+RCT_CUSTOM_VIEW_PROPERTY(license, NSString*, NTMapView)
+{
+  NSString *license = @"";
+  
+  if (json != nil) {
+    license = [RCTConvert NSString:json];
+  }
+
+  [NTMapView registerLicense:license];
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(zoom, CGFloat, NTMapView)
+{
+  [view setZoom:json ? [RCTConvert CGFloat:json] : 0 durationSeconds:0];
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(addBaseLayer, BOOL, NTMapView)
+{
+  BOOL add = [self getBool: json];
+  
+  if (add) {
+    NTCartoOnlineVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DEFAULT];
+    
+    [[view getLayers] add:layer];
+  }
+}
+
+/* 
+ * REGION: UTILS
+ */
+
+- (BOOL)getBool:(NSString *)json {
+  return json ? [RCTConvert CGFloat:json] : NO;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+

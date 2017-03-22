@@ -11,4 +11,6 @@
 
 @interface CTRMapView : RCTViewManager
 
+- (BOOL)getBool:(NSString *)json;
+
 @end

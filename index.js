@@ -1,5 +1,5 @@
 
-var license = "";
+var license = "XTUN3Q0ZDWWdPKysrNHY2bDBJbndORDNHakZTMHNoTFRBaFFmZklNZ1l5b1hmcTBhQUtSeURHMWtSWVF1bWc9PQoKYXBwVG9rZW49NmI1ZGMxZTItMTFkMy00MjY1LTg2MjQtZTFhMWU4ZTY5ZWQ5CmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLmN0cm1hcHZpZXcKb25saW5lTGljZW5zZT0xCnByb2R1Y3RzPXNkay1pb3MtNC4qCndhdGVybWFyaz1jdXN0b20K";
 
 import React, { Component } from 'react';
 import {
@@ -19,7 +19,7 @@ export default class MyMapView extends Component {
         <View style={styles.navigationBar}>
           <Text style={styles.navigationBarText}> CARTO REACT-NATIVE WRAPPER </Text>
         </View>
-        <CTRMapView style={styles.mapview}></CTRMapView>
+        <CTRMapView style={styles.mapview} license={license} zoom={0.5} addBaseLayer={true}></CTRMapView>
         <View style={styles.button}></View>
       </View>
     );
