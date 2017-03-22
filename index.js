@@ -17,7 +17,7 @@ export default class MyMapView extends Component {
       <View style={styles.container}>
         <View style={styles.statusBar}></View>
         <View style={styles.navigationBar}>
-          <Text style={styles.navigationBarText}> CARTO REACT NATIVE SAMPLE </Text>
+          <Text style={styles.navigationBarText}> CARTO REACT-NATIVE WRAPPER </Text>
         </View>
         <CTRMapView style={styles.mapview}></CTRMapView>
         <View style={styles.button}></View>
@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
   },
   navigationBarText: {
     color: "white",
-    fontSize: 16
+    fontSize: 15,
+    fontWeight: "600"
   },
   mapview: {
     height: "89.4%",
