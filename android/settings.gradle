@@ -1,0 +1,3 @@
+rootProject.name = 'CTRMapView'
+
+include ':app'
