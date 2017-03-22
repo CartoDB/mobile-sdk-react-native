@@ -26,8 +26,6 @@ export default class MyMapView extends Component {
   }
 }
 
-// CTRMapView.registerLicense(license);
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
