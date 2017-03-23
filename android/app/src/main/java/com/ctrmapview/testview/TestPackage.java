@@ -1,12 +1,14 @@
-package com.ctrmapview.mapview;
+package com.ctrmapview.testview;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
+import com.facebook.react.views.image.ReactImageManager;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -14,7 +16,7 @@ import java.util.List;
  * Created by aareundo on 23/03/2017.
  */
 
-public class CTRMapPackage implements ReactPackage {
+public class TestPackage implements ReactPackage {
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
@@ -28,19 +30,9 @@ public class CTRMapPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-
-        List<ViewManager> managers = new ArrayList<>();
-
-        // TODO
-        // If the following line is commented out:
-        // 'Warning: Native component for "CTRMapView" does not exist' (obviously)
-
-        // But if it's uncommented:
-        // com.facebook.react.bridge.UnexpectedNativeTypeException:
-        // TypeError: expected dynamic type `int64', but had type `null'
-
-        managers.add(new CTRMapManager());
-
-        return managers;
+//        return Collections.emptyList();
+        return Arrays.<ViewManager>asList(
+                new TestView()
+        );
     }
 }
