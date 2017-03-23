@@ -15,6 +15,8 @@ InternalMapView.propTypes = {
 	alpha: React.PropTypes.number,
 	zoom: React.PropTypes.number,
 	addBaseLayer: React.PropTypes.bool
+	// ,
+	// accessiilityLabel: Rect.PropTypes.string
 }
 
 var CTRMapView = requireNativeComponent('CTRMapView', InternalMapView);
