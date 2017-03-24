@@ -40,16 +40,29 @@ Or Simply build and run the solution from XCode
 
 * `react-native run-android`
 
+#### Project structure
 
-#### Features
+* `CTRMapView.js` – JS Bridge of native code
+* `index.js` – iOS entry file
+* `index.android.js` – Android entry file
+* Android Native
+ * `MainApplication` – Main entry point for the application. Here's where Android bridge is configured
+ * `MainActivity` – Activity that is started
+ * `CTRMapManager` – React module (view manager), contains methods that are called
+ * `CTRMapPackage` – React package that configures which native modules, .js modules and view managers are added
+ * `CTRMapView` – Wrapper class for MapView so the view manager wouldn't communicate with directly with native `MapView` (may not be necessary)
+* iOS Native
+ * `Appdelegate.h/m` – Main iOS entry point, where 
+ * `CTRMapView.h/m` – React module that contains properties called from .js
+ * `` –
 
-##### Layout
+#### Layout
 
 * Navigation bar
 * Full-screen MapView
 * Floating action button in bottom right corner
 
-##### Features
+#### Features
 
 * Initialize CTRMapView
 * Register license
@@ -59,7 +72,7 @@ Or Simply build and run the solution from XCode
 * `TODO` Add marker to map
 * `TODO` Map click event listener
 
-##### Author's notes
+#### Author's notes
 
 Firstly, I must say that I admire the guys at react-native for keeping the documentation so clean and up to date, however, what I would like to see is sample projects: simple, full, working examples of how to create a custom component and create the react-native bridge. 
 
