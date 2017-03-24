@@ -11,9 +11,9 @@ import com.facebook.react.uimanager.ThemedReactContext;
  * Created by aareundo on 23/03/2017.
  */
 
-public class TestView extends SimpleViewManager<RelativeLayout> {
+public class TestManager extends SimpleViewManager<YellowLayout> {
 
-    public static final String REACT_CLASS = "CTRMapManager";
+    public static final String REACT_CLASS = "TestView";
 
     @Override
     public String getName() {
@@ -21,7 +21,7 @@ public class TestView extends SimpleViewManager<RelativeLayout> {
     }
 
     @Override
-    protected RelativeLayout createViewInstance(ThemedReactContext reactContext) {
-        return new RelativeLayout(reactContext);
+    protected YellowLayout createViewInstance(ThemedReactContext reactContext) {
+        return new YellowLayout(reactContext);
     }
 }

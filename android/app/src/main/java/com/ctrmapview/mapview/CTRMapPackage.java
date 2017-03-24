@@ -1,5 +1,6 @@
 package com.ctrmapview.mapview;
 
+import com.ctrmapview.testview.TestManager;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
@@ -40,7 +41,7 @@ public class CTRMapPackage implements ReactPackage {
         // TypeError: expected dynamic type `int64', but had type `null'
 
         managers.add(new CTRMapManager());
-
+//        managers.add(new TestManager());
         return managers;
     }
 }
