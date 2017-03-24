@@ -59,7 +59,12 @@ Or Simply build and run the solution from XCode
 
 ##### Author's notes
 
-I find React Native to still be too unstable to effectively develop custom components on. iOS is currently functional, but Android is displaying weird and inconsistent behaviour. Different versions behave differently. 
+Firstly, I must say that I admire the guys at react-native for keeping the documentation so clean and up to date, however, what I would like to see is sample projects: simple, full, working examples of how to create a custom component and create the react-native bridge. 
+
+They have a huge repository of their code snippets, but that makes it hard to navigate and I didn't manage to find a single working sample.
+
+
+Now, I find React Native to still be too unstable to effectively develop custom components on. iOS is currently functional, but Android is displaying weird and inconsistent behaviour. Different versions behave differently. 
 
 0.4.0 was a major version that updated lots of the underlying logic, apis. Older versions seem to be **more stable** and definitely offer **more working samples**, but I still opted for using the newest version.
 
