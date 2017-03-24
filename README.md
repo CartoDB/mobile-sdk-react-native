@@ -1,6 +1,6 @@
 ## CartoMobileSDK React Native Wrapper
 
-###### NB! This is a __Proof of Concept__ project and should not be seen or taken as a product. Contributions are encouraged
+###### NB! This is a Proof of Concept project and should not be seen or taken as a product. Contributions are encouraged
 
 ###### Additionally, this repository combines the sample project and component. Need to separate them: mobile-react-native-samples & official node package
 
@@ -73,7 +73,8 @@ Now, I find React Native to still be too unstable to effectively develop custom 
 View Manager creation seems to be broken at this point (react-native 0.4.2). Throws:
 
 ```
-com.facebook.react.bridge.UnexpectedNativeTypeException: TypeError: expected dynamic type `int64', but had type `null'
+com.facebook.react.bridge.UnexpectedNativeTypeException: 
+TypeError: expected dynamic type `int64', but had type `null'
 ```
 
 
