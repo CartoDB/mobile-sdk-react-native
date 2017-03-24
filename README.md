@@ -2,6 +2,8 @@
 
 ###### NB! This is a __Proof of Concept__ project and should not be seen or taken as a product. Contributions are encouraged
 
+###### Additionally, this repository combines the sample project and component. Need to separate them: mobile-react-native-samples & official node package
+
 #### Dependencies
 
 * XCode
