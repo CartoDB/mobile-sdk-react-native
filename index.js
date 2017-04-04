@@ -9,7 +9,7 @@ import {
   View
 } from 'react-native';
 
-var CTRMapView = require('./CTRMapView');
+var CTRMapView = require('./NTMapView');
 
 export default class MyMapView extends Component {
   render() {
