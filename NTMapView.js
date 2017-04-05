@@ -6,7 +6,7 @@ import { requireNativeComponent, PropTypes, NativeModules } from 'react-native'
 
 class InternalMapView extends React.Component {
 	render() {
-    	return <CTRMapView {...this.props} />;
+    	return <NTMapView {...this.props} />;
 	}
 }
 
@@ -19,6 +19,6 @@ InternalMapView.propTypes = {
 	// accessiilityLabel: Rect.PropTypes.string
 }
 
-var CTRMapView = requireNativeComponent('CTRMapView', InternalMapView);
+var NTMapView = requireNativeComponent('CTRMapView', InternalMapView);
 
 module.exports = InternalMapView;

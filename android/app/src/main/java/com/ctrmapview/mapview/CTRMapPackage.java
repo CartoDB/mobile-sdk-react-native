@@ -40,7 +40,7 @@ public class CTRMapPackage implements ReactPackage {
         // com.facebook.react.bridge.UnexpectedNativeTypeException:
         // TypeError: expected dynamic type `int64', but had type `null'
 
-//        managers.add(new CTRMapManager());
+        managers.add(new CTRMapManager());
         return managers;
     }
 }

@@ -18,7 +18,7 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 @ReactModule(name = CTRMapManager.REACT_CLASS)
 public class CTRMapManager extends SimpleViewManager<CTRMapView> {
 
-    public static final String REACT_CLASS = "CTRMapView";
+    public static final String REACT_CLASS = "NTMapView";
 
     Context context;
 

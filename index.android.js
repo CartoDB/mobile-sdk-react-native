@@ -9,7 +9,7 @@ import {
   View
 } from 'react-native';
 
-var CTRMapView = require('./NTMapView');
+var NTMapView = require('./NTMapView');
 
 export default class MyMapView extends Component {
   render() {
@@ -18,7 +18,7 @@ export default class MyMapView extends Component {
         <View style={styles.navigationBar}>
           <Text style={styles.navigationBarText}> CARTO REACT-NATIVE WRAPPER </Text>
         </View>
-        <CTRMapView style={styles.mapview} license={license} zoom={0.5} addBaseLayer={true}></CTRMapView>
+        <NTMapView style={styles.mapview} license={license} zoom={0.5} addBaseLayer={true}></NTMapView>
         <View style={styles.button}></View>
       </View>
     );
